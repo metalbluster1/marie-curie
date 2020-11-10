@@ -7,6 +7,7 @@ body {
     font-weight: 200;
     margin: 0;
     background-color: #4f6156;
+    position: relative;
 }
 
 #header {
@@ -17,31 +18,68 @@ body {
 }
 
 #nav-bar {
-    max-width: 85%;
+    max-width: 75%;
     margin: auto;
-    height: 70px;
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+#nav-bar__left {
+    display: flex;
+}
+
+.nav-bar__title {
+    margin: auto 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .nav-bar__link {
-    padding: 0 10px;
+    padding: 0 15px;
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 #nav-bar__logo {
-    height: 45px;
+    height: 50px;
     border-radius: 50%;
     background-color: #a0c7b0;
+    padding: 0;
+    overflow: hidden;
 }
+
+#nav-bar__img {
+    height: 50px;
+    width: 50px;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 16%;
+    right: 4%;
+    height: 35px;
+    width: 50px;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    padding: 0;
+}
+
 
 #main {
     margin: 0 auto;
     background-color: #779081;
-    padding: 80px 0 0 0;
+    padding: 90px 0 0 0;
 }
 
 #img-banner {
@@ -55,7 +93,7 @@ body {
 }
 
 #image {
-    max-width: 30%;
+    max-width: 25%;
     margin: 0 auto;
     display: block;
     border-radius: 50%;
@@ -80,6 +118,7 @@ body {
 }
 
 .title_caption {
+    font-size: 1.5rem;
     padding-bottom: 20px;
     margin: 5px auto;
     border-bottom: 2px solid #4f6156;
@@ -104,12 +143,23 @@ body {
 
 .section_text {
     margin: 10px auto;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+#nobel-prizes {
+    border-bottom: none;
 }
 
 .external {
+    font-size: 1.2rem;
     text-align: center;
     border-bottom: none;
     padding-top: 10px;
+}
+
+#copyright {
+    font-size: 1rem;
 }
 
 #tribute-link, #tribute-link:visited, #tribute-link:active {
@@ -143,24 +193,99 @@ body {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+    #nav-bar {
+        max-width: 90%;
+    }
+    .nav-bar__link {
+        padding: 0 9px;
+        font-size: 1rem;
+    }
+    .nav-bar__title {
+        margin: auto 2px;
+        font-size: 1.3rem;
+    }
+    #nav-bar__logo {
+        margin: 0 15px;
+    }
     #image {
-        max-width: 50%;
+        max-width: 40%;
+    }
+    .title_caption {
+        font-size: 1.2rem;
+    }
+    #tribute-info {
+        width: 85%;
     }
 }
 
 @media (max-width: 768px) {
+    #nav-bar {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        align-items: center;
+        justify-content: space-around;
+    }
     .nav-bar__link {
-        font-size: 0.8rem;
         padding: 0 5px;
+        font-size: .9rem;
+    }
+    #nav-bar__logo {
+        margin: 0 5px;
+    }
+    .nav-bar__title {
+        margin: auto 2px;
+        font-size: 1rem;
+    }#main {
+        padding: 100px 0 0 0;
     }
     #title {
         font-size: 1.5rem;
     }
-    #tribute-info {
+    .title_caption {
+        font-size: 1rem;
+    }
+    .title_main {
+        margin: 10px auto;
         font-size: 1.2rem;
     }
-    #image {
-        max-width: 60%;
+    .section_heading {
+        margin: 15px auto;
+        font-size: 1.1rem;
+    }
+    .section_text {
+        font-size: .9rem;
+        font-weight: 100;
+    }
+    #tribute-info {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    .external {
+        font-size: 0.9rem;
+    }
+    #copyright {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 425px) {
+    #nav-bar {
+        max-width: 100%;
+    }
+    .nav-bar__link {
+        padding: 0 4px;
+        font-size: .8rem;
+    }
+    .section {
+        padding: 88px 0 10px 0;
+    }
+    .section_heading {
+        margin: 15px auto;
+        font-size: 0.9rem;
+    }
+    .external {
+        padding: 5px;
     }
 }
