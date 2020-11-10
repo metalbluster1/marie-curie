@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     margin: 0;
-    background-color: #4f6156;
+    background: linear-gradient(45deg, #193323, #4f6156);
     position: relative;
 }
 
@@ -78,7 +78,6 @@ body {
 
 #main {
     margin: 0 auto;
-    background-color: #779081;
     padding: 90px 0 0 0;
 }
 
@@ -125,7 +124,7 @@ body {
 }
 
 #tribute-info {
-    margin: 10px auto 10px auto;
+    margin: 10px auto 0 auto;
     color: #fff;
     font-size: 1.25rem;
 }
@@ -169,6 +168,7 @@ body {
 
 #footer {
     color: #fff;
+    background-color: #4f6156;
 }
 
 #linkedin {
@@ -178,9 +178,6 @@ body {
 @media (max-width: 1300px) {
     #title {
         font-size: 1.5rem;
-    }
-    #tribute-info {
-        margin: 10px auto 10px auto;
     }
     .section {
         max-width: 90%;
