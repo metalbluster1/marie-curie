@@ -43,13 +43,18 @@ body {
 }
 
 .nav-bar__link {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
     padding: 0 15px;
     color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
 }
 
-#nav-bar__logo {
+.nav-bar__logo {
+    display: inline-block;
+    cursor: pointer;
     height: 50px;
     border-radius: 50%;
     background-color: #a0c7b0;
@@ -57,7 +62,7 @@ body {
     overflow: hidden;
 }
 
-#nav-bar__img {
+.nav-bar__img {
     height: 50px;
     width: 50px;
 }
@@ -103,7 +108,7 @@ body {
     transform: rotate(-40deg);
 }
 
-#main {
+#main__section {
     margin: 0 auto;
     padding: 90px 0 0 0;
 }
@@ -158,8 +163,8 @@ body {
 
 .section {
     max-width: 60%;
-    padding: 70px 0 10px 0;
     margin: 0 auto;
+    padding: 15px 0 10px 0;
     border-bottom: 2px solid #4f6156;
 }
 
@@ -229,7 +234,7 @@ body {
         margin: auto 2px;
         font-size: 1.3rem;
     }
-    #nav-bar__logo {
+    .nav-bar__logo {
         margin: 0 15px;
     }
     #image {
@@ -255,13 +260,13 @@ body {
         padding: 0 5px;
         font-size: .9rem;
     }
-    #nav-bar__logo {
+    .nav-bar__logo {
         margin: 0 5px;
     }
     .nav-bar__title {
         margin: auto 2px;
         font-size: 1rem;
-    }#main {
+    }#main__section {
         padding: 100px 0 0 0;
     }
     #title {
@@ -327,9 +332,6 @@ body {
     .mobile-menu {
         display: flex;
     }
-    .section {
-        padding: 75px 0 10px 0;
-    }
     .section_heading {
         margin: 15px auto;
         font-size: 0.9rem;
@@ -343,10 +345,10 @@ body {
     #nav-bar {
         max-width: 95%;
     }
-    #nav-bar__logo {
+    .nav-bar__logo {
         height: 30px;
     }
-    #nav-bar__img {
+    .nav-bar__img {
         height: 30px;
         width: 30px;
     }
