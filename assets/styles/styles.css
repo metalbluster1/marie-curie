@@ -1,3 +1,8 @@
+:root {
+    --dark-olive: rgba(25, 51, 35, 1);
+    --dark--olive--transparent: rgba(25, 51, 35, 0.9);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -14,7 +19,7 @@ body {
     position: fixed;
     width: 100vw;
     z-index: 2;
-    background-color: #4f6156;
+    background-color: var(--dark-olive);
 }
 
 #nav-bar {
@@ -59,22 +64,44 @@ body {
 
 .mobile-menu {
     display: none;
-    position: absolute;
-    top: 16%;
-    right: 4%;
     height: 35px;
-    width: 50px;
+    width: 40px;
     justify-content: space-evenly;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .bar {
     background-color: #fff;
-    height: 3px;
+    height: 2px;
     width: 100%;
     padding: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
 }
 
+.top-bar {
+    transform: rotate(0deg);
+    transform-origin: 8px 5px;
+}
+.middle-bar {
+    transform: scale(1);  
+    transform-origin: left; 
+}
+.bottom-bar {
+    transform: rotate(0deg);
+    transform-origin: 7px -4px;
+}
+
+.top-bar--active {
+    transform: rotate(41deg);
+}
+.middle-bar--active {
+    transform: scale(0);
+}
+.bottom-bar--active {
+    transform: rotate(-40deg);
+}
 
 #main {
     margin: 0 auto;
@@ -168,7 +195,7 @@ body {
 
 #footer {
     color: #fff;
-    background-color: #4f6156;
+    background-color: #193323;
 }
 
 #linkedin {
@@ -268,15 +295,40 @@ body {
 }
 
 @media (max-width: 425px) {
+
     #nav-bar {
-        max-width: 100%;
+        max-width: 80%;
+        height: 70px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-bar__links {
+        position: absolute;
+        left: 100%;
+        right: -100%;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+    .nav-bar-links--is-visible {
+        left: 0;
+        right: 0;
     }
     .nav-bar__link {
-        padding: 0 4px;
+        width: 100%;
+        background-color: var(--dark--olive--transparent);
+        padding: 10px 0;
         font-size: .8rem;
+        margin-top: 1px;
+        text-align: center;
+    }
+    .mobile-menu {
+        display: flex;
     }
     .section {
-        padding: 88px 0 10px 0;
+        padding: 75px 0 10px 0;
     }
     .section_heading {
         margin: 15px auto;
@@ -284,5 +336,28 @@ body {
     }
     .external {
         padding: 5px;
+    }
+}
+
+@media (max-width: 300px) {
+    #nav-bar {
+        max-width: 95%;
+    }
+    #nav-bar__logo {
+        height: 30px;
+    }
+    #nav-bar__img {
+        height: 30px;
+        width: 30px;
+    }
+    .nav-bar__title {
+        font-size: 0.9rem;
+    }
+    .bar {
+        height: 1px;
+    }
+    .mobile-menu {
+        height: 30px;
+        width: 30px;
     }
 }
